@@ -5,25 +5,40 @@
   box-sizing: border-box;
 }
 
-/*=============== FONT ===============*/
-body {
-  font-family: 'Georgia', serif;
-  font-size: 1rem;
-  color: #4a4a4a;
+body, html {
+  height: 100%; /* Full height */
 }
 
-h1, h2, h3 {
+body {
   font-family: 'Georgia', serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container takes up full height */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Wrapper takes up remaining height to push the footer down */
+.wrapper {
+  flex: 1;
 }
 
 /*=============== HEADER ===============*/
 .main-header {
   background-color: #3b3a36;
-  height: var(--header-height);
+  padding: 20px;
+}
+
+.main-header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 }
 
 .main-header nav ul {
@@ -31,7 +46,7 @@ h1, h2, h3 {
 }
 
 .main-header nav ul li {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 .main-header nav ul li a {
@@ -43,27 +58,38 @@ h1, h2, h3 {
   color: #ff6f61;
 }
 
+/*=============== FOOTER ===============*/
+.footer {
+  background-color: #3b3a36;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
 /*=============== HOME SECTION ===============*/
 .home-layout {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .profile-pic {
   border: 8px solid #00796b;
-  padding: 8px;
   border-radius: 50%;
-  overflow: hidden;
   margin-right: 50px;
 }
 
 .profile-pic img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 
 .intro-text {
-  max-width: 600px;
+  max-width: 60%;
 }
 
 .intro-text h2 {
@@ -91,41 +117,18 @@ h1, h2, h3 {
   background: #3b3a36;
 }
 
-/*=============== CONTACT PAGE STYLES ===============*/
-.contact {
-  background: #f7f7f7;
+/*=============== CONTACT PAGE ===============*/
+.contact-info p a {
+  color: #00796b;
 }
 
-.contact-info p {
-  margin-bottom: 30px;
-  font-size: 1.2rem;
-}
-
-/* Form Styling */
 .contact-form {
-  max-width: 600px;
   margin: 0 auto;
+  max-width: 600px;
 }
 
 .contact-form label {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 2px solid #00796b;
-  border-radius: 10px;
-  background: #ffffff;
-}
-
-/*=============== FOOTER ===============*/
-footer {
-  background-color: #3b3a36;
-  color: #ffffff;
-  text-align: center;
-  padding: 15px 0;
+  font-weight: 600;
+  display: block;
+  margin: 10px 0;
 }
