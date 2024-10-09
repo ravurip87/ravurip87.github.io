@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="main-header">
         <nav>
             <h1>Praseeda Ravuri</h1>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="research.html">Research</a></li>
@@ -20,37 +21,42 @@
         </nav>
     </header>
 
-    <section class="section projects">
-        <div class="container">
-            <h2 class="section__title">Projects</h2>
-            <span class="section__subtitle">My work in AI and Cloud Computing</span>
-            <div class="card">
-                <h5>Business Analytics Platform</h5>
-                <p>Developed a quantitative analysis tool for market data using Python and C++. Part of the OSU Business Analytics Club project.</p>
-            </div>
-            <div class="card">
-                <h5>Cloud Computing Optimization</h5>
-                <p>As part of a research mentorship program, I collaborated with a team on a cloud computing optimization project aimed at improving security and resource management using machine learning. We developed an Intrusion Detection System (IDS) to strengthen cloud security, applying machine learning algorithms to monitor network traffic and detect anomalies. Additionally, we implemented predictive models for dynamic resource allocation, which helped optimize cloud infrastructure utilization. Our efforts included designing intelligent auto-scaling strategies and using real-time demand forecasting to reduce costs while maintaining high performance and security standards.</p>
-            </div>
-            <div class="card">
-                <h5>Web Development for Student Organizations</h5>
-                <p>Maintained and enhanced the OSU College of Engineering website using Drupal and JavaScript for better content management.</p>
-            </div>
-            <div class="card">
-                <h5>Business Analytics Platform</h5>
-                <p>Developed a quantitative analysis tool for market data using Python and C++. Part of the OSU Business Analytics Club project.</p>
-            </div>
-            <div class="card">
-                <h5>Cloud Computing Optimization</h5>
-                <p>Worked on cloud-based resource management using machine learning to improve security and resource allocation.</p>
-            </div>
-            <div class="card">
-                <h5>Web Development for Student Organizations</h5>
-                <p>Maintained and enhanced the OSU College of Engineering website using Drupal and JavaScript for better content management.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Main Content Wrapper -->
+    <div class="wrapper">
+        <!-- Projects Section -->
+        <section class="section projects">
+            <div class="container">
+                <h2 class="section__title">Projects</h2>
+                <span class="section__subtitle">My work in AI, Cloud Computing, and Data Science</span>
+                
+                <!-- Project 1: Cloud Computing Optimization -->
+                <div class="project-card">
+                    <h3>Cloud Computing Optimization</h3>
+                    <p>As part of a research mentorship program, I collaborated with a team on a cloud computing optimization project aimed at improving security and resource management using machine learning. We developed an Intrusion Detection System (IDS) to strengthen cloud security, applying machine learning algorithms to monitor network traffic and detect anomalies. Additionally, we implemented predictive models for dynamic resource allocation, which helped optimize cloud infrastructure utilization. Our efforts included designing intelligent auto-scaling strategies and using real-time demand forecasting to reduce costs while maintaining high performance and security standards.</p>
+                </div>
 
+                <!-- Project 2: Business Analytics Platform -->
+                <div class="project-card">
+                    <h3>Business Analytics Platform</h3>
+                    <p>As part of the OSU Business Analytics Club project, I helped develop a quantitative analysis tool for market data using Python and C++. This platform integrated various financial datasets to perform statistical modeling and trend analysis, providing insights on stock performance, market volatility, and pricing patterns. The tool featured automated data ingestion and preprocessing, advanced statistical techniques for trend forecasting, and visualization capabilities for easy interpretation of results. My contributions included designing efficient data structures in C++ to handle large datasets and implementing machine learning models in Python for predictive analysis, allowing users to make informed decisions based on data-driven insights.</p>
+                </div>
+
+                <!-- Project 3: Explainable Natural Language Processing for Legal Document Analysis -->
+                <div class="project-card">
+                    <h3>Explainable Natural Language Processing for Legal Document Analysis</h3>
+                    <p>This project is also part of my research mentorship program, where I was a mentee. The project is designed to create an NLP system that can analyze, classify, and interpret legal documents using deep learning models. The project involves preprocessing legal text data using NLTK and SpaCy for tokenization and named entity recognition, followed by fine-tuning a BERT model to classify clauses and predict case outcomes. An explainability module using LIME is integrated to provide clear insights into which words or phrases influenced the model’s decisions. The final output is presented through a web-based interface, allowing legal professionals to interact with the tool and understand the AI's reasoning, thereby enhancing transparency and trust in legal AI applications.</p>
+                </div>
+
+                <!-- Project 4: Healthcare Decision Support System Using Federated Learning -->
+                <div class="project-card">
+                    <h3>Healthcare Decision Support System Using Federated Learning</h3>
+                    <p>This project, part of my research mentorship program, aims to develop a privacy-preserving AI framework that enables hospitals to collaboratively build a diagnostic model without sharing sensitive patient data. Using TensorFlow Federated and PySyft, the system implements a federated learning setup to train models like LSTMs or CNNs on distributed electronic health records (EHR) and medical image data. Differential privacy techniques are used to protect individual patient data, ensuring that only encrypted model parameters are shared and aggregated across hospital servers. Secure aggregation methods are employed to combine updates from multiple institutions, resulting in a robust global model that performs well across diverse datasets. The final system is tested on real-world healthcare data to provide accurate disease predictions, offering a decentralized solution for diagnostic support while maintaining patient privacy.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Praseeda Ravuri. All rights reserved.</p>
     </footer>
