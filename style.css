@@ -1,1 +1,178 @@
+/* Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f7f7;
+}
+
+h1, h2, h3 {
+    color: #084C61;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    text-align: center;
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: #084C61;
+    color: white;
+    padding: 20px;
+}
+
+.main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.main-header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.main-header ul li a:hover {
+    color: #FFE156;
+}
+
+/* Home Section */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: url('images/floral-bg.jpg') no-repeat center center/cover;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #084C61;
+}
+
+.intro-text {
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.intro-text h2 {
+    color: #FF6B6B;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FF6B6B;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #FFE156;
+}
+
+/* Projects and Research Sections */
+.section {
+    padding: 60px 20px;
+}
+
+.project-grid, .research-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-item, .research-item {
+    border: 2px solid #084C61;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    margin: 15px;
+    background-color: #e9f7f9;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.project-item h3, .research-item h3 {
+    color: #084C61;
+}
+
+.project-item a, .research-item a {
+    color: #FF6B6B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-item a:hover, .research-item a:hover {
+    color: #084C61;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #084C61;
+    color: white;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact button {
+    padding: 15px;
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact button:hover {
+    background-color: #FFE156;
+}
+
+/* Footer */
+footer {
+    background-color: #084C61;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
