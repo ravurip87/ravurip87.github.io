@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="main-header">
         <nav>
             <h1>Praseeda Ravuri</h1>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="research.html">Research</a></li>
@@ -20,32 +21,48 @@
         </nav>
     </header>
 
-    <section class="section research">
-        <div class="container">
-            <h2 class="section__title">Research Papers</h2>
-            <span class="section__subtitle">Publications & Research Contributions</span>
-            <div class="card">
-                <h5>Developments in Natural Language Processing</h5>
-                <p>An overview of applications and challenges in NLP.</p>
-                <a href="pdfs/Developments_in_NLP.pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
-            </div>
-            <div class="card">
-                <h5>Future Directions of AI Integration</h5>
-                <p>Managing strategies and opportunities for AI adoption.</p>
-                <a href="pdfs/Future_Directions_AI.pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
-            </div>
-            <div class="card">
-                <h5>Modernizing Cloud Computing Systems</h5>
-                <p>Integrating machine learning for multi-objective optimization.</p>
-                <a href="pdfs/Modernizing_Cloud_Computing.pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
-            </div>
-        </div>
-    </section>
+    <!-- Main Content Wrapper -->
+    <div class="wrapper">
+        <!-- Research Section -->
+        <section class="section research">
+            <div class="container">
+                <h2 class="section__title">Research Papers</h2>
+                <span class="section__subtitle">Publications & Research Contributions</span>
 
+                <!-- Research 1: Future Directions of Artificial Intelligence Integration -->
+                <div class="research-card">
+                    <h3>Future Directions of Artificial Intelligence Integration</h3>
+                    <p>This research paper explores the integration of AI across various industries, focusing on data quality, privacy, and security challenges. It proposes a comprehensive framework for overcoming these obstacles to enable effective AI adoption. The research delves into strategies for managing AI projects, balancing technological opportunities with ethical considerations, and setting future directions for AI integration in different sectors.</p>
+                    <a href="pdfs/JIFS238830.pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
+                </div>
+
+                <!-- Research 2: AI and Data Science for Recent Trends -->
+                <div class="research-card">
+                    <h3>AI and Data Science for Recent Trends</h3>
+                    <p>This book chapter discusses advancements in AI and data science, covering topics such as deep learning, machine learning techniques, and their applications in healthcare, finance, and marketing. It also addresses ethical considerations, highlighting recent trends and challenges. This research provides an in-depth look at how emerging AI technologies are shaping modern data-driven industries and their implications for society and businesses.</p>
+                    <a href="pdfs/UPDATED-FINAL-PRINT-AI and Data Science for Recent Trends  (2).pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
+                </div>
+
+                <!-- Research 3: Developments in Natural Language Processing -->
+                <div class="research-card">
+                    <h3>Developments in Natural Language Processing: Applications and Challenges</h3>
+                    <p>This research paper examines various NLP techniques, including machine translation, sentiment analysis, and summarization, addressing challenges such as ambiguity resolution and multilingual processing. It presents advancements in NLP technologies, exploring real-world applications and the complexities of making AI understand and generate human language accurately and effectively.</p>
+                    <a href="pdfs/Developments_in_Natural_Language_Processing_Applications_and_Challenges (2).pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
+                </div>
+
+                <!-- Research 4: Modernizing Cloud Computing Systems -->
+                <div class="research-card">
+                    <h3>Modernizing Cloud Computing Systems with Machine Learning for Multi-Objective Optimization</h3>
+                    <p>This research presents an ML-based multi-objective optimization technique for cloud computing that enhances task scheduling, resource allocation, and security to improve performance and efficiency. It introduces strategies for optimizing cloud infrastructure through predictive modeling and intelligent resource management. The proposed framework integrates machine learning to provide dynamic, data-driven cloud optimization solutions.</p>
+                    <a href="pdfs/Modernizing_cloud_computing_systems_with_integrati.pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Praseeda Ravuri. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
-
