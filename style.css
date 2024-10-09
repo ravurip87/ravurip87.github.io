@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Serif+Pro:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Serif+Pro:wght@600&display=swap');
 
 /*=============== VARIABLES ===============*/
 :root {
@@ -8,8 +8,9 @@
   --secondary-color: #004d40; /* Dark Teal */
   --highlight-color: #ffab40; /* Accent Orange */
   --background-color: #f5f5f5; /* Light Grey Background */
-  --text-color: #333;
-  --white-color: #ffffff;
+  --text-color: #333; /* Main Text Color */
+  --white-color: #ffffff; /* White Color */
+  --footer-bg-color: #004d40;
 
   /* Typography Variables */
   --font-primary: 'Roboto', sans-serif;
@@ -17,7 +18,6 @@
 
   /* Layout */
   --header-height: 60px;
-  --footer-height: 50px;
 }
 
 /*=============== BASE STYLES ===============*/
@@ -27,12 +27,15 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: var(--font-primary);
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
@@ -72,19 +75,7 @@ ul {
   color: var(--highlight-color);
 }
 
-/*=============== FOOTER ===============*/
-footer {
-  background: var(--secondary-color);
-  color: var(--white-color);
-  text-align: center;
-  padding: 15px 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  z-index: 100;
-}
-
-/*=============== SECTIONS ===============*/
+/*=============== SECTION STYLES ===============*/
 .section {
   flex: 1;
   padding: 60px 20px;
@@ -94,46 +85,60 @@ footer {
   font-family: var(--font-title);
   color: var(--primary-color);
   margin-bottom: 15px;
+  text-align: center;
 }
 
-/*=============== RESPONSIVE GRID ===============*/
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+.section__subtitle {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 400;
+  color: var(--text-color);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+/*=============== FOOTER ===============*/
+footer {
+  background: var(--footer-bg-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
 }
 
 /*=============== HOME SECTION ===============*/
 .home-section {
   background: url("images/floral-bg.jpg") no-repeat center center/cover;
   text-align: center;
-  padding: 100px 0;
+  padding: 80px 20px;
 }
 
 .home-section .profile-pic {
   width: 150px;
   height: 150px;
-  margin: 0 auto 20px;
+  margin: 20px auto;
   border-radius: 50%;
   overflow: hidden;
 }
 
 .home-section h2 {
-  margin-bottom: 10px;
   font-size: 2rem;
+  color: var(--primary-color);
+  margin: 20px 0;
 }
 
 .home-section p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 20px;
-  color: #555;
+  max-width: 800px; /* Set a max width for better readability */
+  margin: 10px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.home-section a.btn-primary {
+  margin-top: 30px;
 }
 
 /*=============== CARD ===============*/
@@ -156,34 +161,118 @@ footer {
   margin-bottom: 10px;
 }
 
-/*=============== BUTTONS ===============*/
+/*=============== CONTACT SECTION ===============*/
+.contact {
+  background-color: var(--background-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-info {
+  margin-bottom: 40px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  color: var(--highlight-color);
+}
+
+/* Contact Form Styles */
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form form {
+  background: var(--white-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 1px solid var(--highlight-color);
+  outline: none;
+}
+
+/*=============== BUTTON STYLES ===============*/
 .btn {
   display: inline-block;
   padding: 12px 30px;
-  border: 2px solid var(--primary-color);
   border-radius: 5px;
-  background: var(--primary-color);
-  color: var(--white-color);
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.btn:hover {
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
   background: var(--highlight-color);
   color: var(--white-color);
   border: 2px solid var(--highlight-color);
 }
 
+.btn-secondary {
+  background: var(--white-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: 2px solid var(--primary-color);
+}
+
 /*=============== MEDIA QUERIES ===============*/
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .main-header nav ul {
     display: none;
   }
-  
-  .home-section h2 {
-    font-size: 1.5rem;
+
+  .contact-form form {
+    padding: 15px;
   }
 
-  .home-section p {
+  .contact-info p {
     font-size: 1rem;
   }
 }
