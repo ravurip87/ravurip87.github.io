@@ -1,191 +1,150 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css?family=Poiret+One|Lora:wght@400;600|Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Serif+Pro:wght@600&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
+/*=============== VARIABLES ===============*/
 :root {
-  --header-height: 3.5rem;
+  /* Color Variables */
+  --primary-color: #00796b; /* Main Teal */
+  --secondary-color: #004d40; /* Dark Teal */
+  --highlight-color: #ffab40; /* Accent Orange */
+  --background-color: #f5f5f5; /* Light Grey Background */
+  --text-color: #333;
+  --white-color: #ffffff;
 
-  /*========== Colors ==========*/
-  --first-color: #004d40; /* Dark Teal Color */
-  --second-color: #00796b; /* Secondary Teal Color */
-  --highlight-color: #ffab40; /* Highlight Orange Color */
-  --bg-color: #f3f7f7; /* Light Background */
-  --text-color: #333333; /* Primary Text Color */
-  --body-color: #ffffff; /* Body Background Color */
-  --container-color: #ffffff;
-
-  /*========== Typography ==========*/
+  /* Typography Variables */
   --font-primary: 'Roboto', sans-serif;
-  --font-secondary: 'Lora', serif;
-  --font-accent: 'Poiret One', cursive;
-  --font-biggest: 2rem;
-  --font-h1: 1.75rem;
-  --font-h2: 1.5rem;
-  --font-h3: 1.25rem;
-  --font-normal: 1rem;
-  --font-small: 0.875rem;
+  --font-title: 'Source Serif Pro', serif;
 
-  /*========== z-index ==========*/
-  --z-normal: 1;
-  --z-fixed: 100;
+  /* Layout */
+  --header-height: 60px;
+  --footer-height: 50px;
 }
 
 /*=============== BASE STYLES ===============*/
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
+body, html {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-primary);
-  font-size: var(--font-normal);
-  background: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.6;
-  transition: all 0.3s ease;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-secondary);
-  font-weight: 600;
-  color: var(--first-color);
 }
 
 a {
-  color: var(--first-color);
   text-decoration: none;
+  color: var(--primary-color);
 }
 
-ul, li {
+ul {
   list-style: none;
 }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-/*=============== NAVBAR ===============*/
+/*=============== HEADER ===============*/
 .main-header {
-  background: var(--first-color);
-  color: var(--body-color);
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: var(--z-fixed);
-}
-
-.main-header nav {
+  background-color: var(--secondary-color);
+  height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
-.main-header ul {
+.main-header nav ul {
   display: flex;
 }
 
-.main-header li {
-  margin-left: 20px;
+.main-header nav ul li {
+  margin: 0 15px;
 }
 
-.main-header li a {
-  color: var(--body-color);
-  padding: 8px 16px;
-  border-radius: 4px;
+.main-header nav ul li a {
+  color: var(--white-color);
+  font-weight: 500;
 }
 
-.main-header li a:hover {
-  background: var(--highlight-color);
-  color: var(--first-color);
+.main-header nav ul li a:hover {
+  color: var(--highlight-color);
 }
 
-/*=============== PROFILE PICTURE ===============*/
-.profile-pic {
-  max-width: 130px;
-  margin: 20px;
-  border: 6px solid rgba(0, 77, 64, 0.4);
+/*=============== FOOTER ===============*/
+footer {
+  background: var(--secondary-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
+}
+
+/*=============== SECTIONS ===============*/
+.section {
+  flex: 1;
+  padding: 60px 20px;
+}
+
+.section h2, .section h3 {
+  font-family: var(--font-title);
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/*=============== RESPONSIVE GRID ===============*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/*=============== HOME SECTION ===============*/
+.home-section {
+  background: url("images/floral-bg.jpg") no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.home-section .profile-pic {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
   border-radius: 50%;
   overflow: hidden;
 }
 
-.profile-pic img {
-  width: 100%;
+.home-section h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
 }
 
-/*=============== SOCIAL ICONS ===============*/
-.social {
-  text-align: center;
-  margin: 20px 0;
+.home-section p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #555;
 }
 
-.icon-btn {
-  margin: 5px;
-  font-size: 24px;
-  line-height: 50px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.icon-btn:hover {
-  transform: scale(1.1);
-}
-
-.github {
-  background: black;
-}
-
-.linkedin {
-  background: #0077b5;
-}
-
-.angellist {
-  background: grey;
-}
-
-/*=============== BUTTON STYLES ===============*/
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  border-radius: 5px;
-  font-weight: 500;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background: var(--first-color);
-  color: var(--body-color);
-}
-
-.btn-primary:hover {
-  background: var(--second-color);
-}
-
-.btn-secondary {
-  background: var(--body-color);
-  color: var(--first-color);
-  border: 2px solid var(--first-color);
-}
-
-.btn-secondary:hover {
-  background: var(--first-color);
-  color: var(--body-color);
-}
-
-/*=============== CARDS ===============*/
+/*=============== CARD ===============*/
 .card {
-  padding: 20px;
-  background: var(--body-color);
-  border: 1px solid var(--first-color);
+  background: var(--white-color);
+  border: 1px solid var(--primary-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
@@ -193,40 +152,38 @@ ul, li {
 }
 
 .card h5 {
-  font-size: var(--font-h2);
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
-.card p {
-  margin-bottom: 15px;
-  font-size: var(--font-small);
-  color: var(--text-color);
+/*=============== BUTTONS ===============*/
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  transition: all 0.3s ease;
 }
 
-/*=============== SECTION ===============*/
-.section {
-  padding: 60px 20px;
+.btn:hover {
+  background: var(--highlight-color);
+  color: var(--white-color);
+  border: 2px solid var(--highlight-color);
 }
 
-.section__title, .section__subtitle {
-  text-align: center;
-  margin-bottom: 20px;
-}
+/*=============== MEDIA QUERIES ===============*/
+@media screen and (max-width: 768px) {
+  .main-header nav ul {
+    display: none;
+  }
+  
+  .home-section h2 {
+    font-size: 1.5rem;
+  }
 
-.section__title {
-  font-size: var(--font-h1);
-  color: var(--first-color);
-}
-
-.section__subtitle {
-  font-size: var(--font-small);
-  color: var(--text-color);
-}
-
-/*=============== FOOTER ===============*/
-footer {
-  background: var(--first-color);
-  color: var(--body-color);
-  text-align: center;
-  padding: 20px 0;
+  .home-section p {
+    font-size: 1rem;
+  }
 }
